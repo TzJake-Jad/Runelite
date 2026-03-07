@@ -23,7 +23,7 @@ dependencies {
 	testImplementation group: 'net.runelite', name: 'jshell', version: runeLiteVersion
 }
 
-group = 'com.example'
+group = 'com.tzjakejad.notes'
 version = '1.0-SNAPSHOT'
 
 tasks.withType(JavaCompile) {
@@ -34,6 +34,6 @@ tasks.withType(JavaCompile) {
 task(run, dependsOn: jar, type: JavaExec) {
 	group = 'application'
 	classpath = sourceSets.test.runtimeClasspath
-	mainClass = 'com.example.ExamplePluginTest'
+	mainClass = 'com.tzjakejad.notes.ExamplePluginTest'
 	enableAssertions = true
 }
