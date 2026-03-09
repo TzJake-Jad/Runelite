@@ -15,7 +15,7 @@ import java.awt.image.BufferedImage;
 
 @Slf4j
 @PluginDescriptor(
-	name = "Better Notes",
+	name = "Checklist Notes",
 	description = "A notepad with per-line checkboxes and paste support",
 	tags = {"notes", "checklist", "todo"}
 )
@@ -36,14 +36,14 @@ public class NotesPlugin extends Plugin
 		panel = new NotesPanel(configManager);
 
 		navButton = NavigationButton.builder()
-			.tooltip("Better Notes")
+			.tooltip("Checklist Notes")
 			.icon(buildIcon())
 			.priority(7)
 			.panel(panel)
 			.build();
 
 		clientToolbar.addNavigation(navButton);
-		log.info("Better Notes started");
+		log.info("Checklist Notes started");
 	}
 
 	@Override
@@ -52,7 +52,7 @@ public class NotesPlugin extends Plugin
 		clientToolbar.removeNavigation(navButton);
 		panel = null;
 		navButton = null;
-		log.info("Better Notes stopped");
+		log.info("Checklist Notes stopped");
 	}
 
 	@Provides
